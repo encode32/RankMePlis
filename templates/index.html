@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Boost Me Please</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            background: url('./img/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #steam_login_img {
+            margin: 8px;
+        }
+
+        .navbar {
+            border-radius: 0px;
+        }
+
+        .navbar-nav > .avatar > a {
+            padding: 8px 10px 0px 0px;
+        }
+
+        .container {
+            width: 600px;
+        }
+
+        .lobylist {
+            background-color: #222;
+            opacity: 0.85;
+            border-color: #080808;
+            color: #9d9d9d;
+            height: 65px;
+        }
+
+        .lobylistexternal {
+            background-color: #303030;
+            opacity: 0.85;
+            border-color: #080808;
+            color: #9d9d9d;
+            height: 100px;
+        }
+
+        .formlist {
+            background-color: #222;
+            opacity: 0.85;
+            border-color: #080808;
+            color: #9d9d9d;
+            height: 200px;
+        }
+
+        .ranks {
+            width: 50px;
+        }
+
+        .prime_logo {
+            width: 20px;
+        }
+
+        .social_logo {
+            width: 40px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .info {
+            float: left;
+            font-weight: bold;
+        }
+
+        .rank {
+            float: left;
+            position: absolute;
+            margin-top: 20px;
+        }
+
+        .prime {
+            float: left;
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 65px;
+        }
+
+        .join {
+            float: right;
+        }
+
+        .send {
+            float: right;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">Boost Me Please!!!</a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <a href='http://steamcommunity.com/groups/boostme_xyz'><img class="social_logo" src='./img/steam.png' /></a>
+            </ul>
+            <ul class="nav navbar-nav navbar-left">
+                <a href='https://discord.gg/RT7ZeBq'><img class="social_logo" src='./img/discord.png' /></a>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {{data.login | safe}}
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {{data.form | safe}}
+        {{data.lobby_data | safe}}
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="text-center">
+                <ul class="list-unstyled">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
